@@ -4,17 +4,57 @@
     <title>{{#if title}}{{title}}{{else}}Social Wall{{/if}}</title>
     <meta charset="UTF-8">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+</style>
+
+
+
+
+
+
+
     <link rel="stylesheet" href="/stylesheets/normalize.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
     <div id="page">
       <header id="page-header">
-        <h1>Social Wall</h1>
+        <h1>Horse Renoir's Social Wall</h1>
+       
+    
+  
+        <audio id="audio" src="scream.wav" autostart="false" ></audio>
+    <a onclick="PlaySound()"> Post HR Reviews and other things, vote up or down eachother's comments!</a>
+    <script>
+    function PlaySound() {
+          var sound = document.getElementById("audio");
+          sound.play()
+      }
+      </script>
+
+
+      <i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+    <script>
+function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+      </script>
+
       </header>
       <div id="page-content">
         {{{body}}}
       </div>
-    </div>
+   </div>
   </body>
 </html>
